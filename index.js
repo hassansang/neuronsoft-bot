@@ -1,8 +1,8 @@
+require("dotenv").config()
 const { Telegraf } = require("telegraf");
-const config = require("config");
 
-const bot = new Telegraf("7941758563:AAGIUiq25TsfeLiFs_hZFYlTzYVk_yxJYjI");
-adminID = 7419619814;
+const bot = new Telegraf(process.env.BOT_TOKEN);
+const adminID = process.env.ADMIN_ID;
 
 const { startMessage } = require("./MessageHandler");
 const userState = {};
