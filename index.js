@@ -3,12 +3,13 @@ const config = require("config");
 
 const bot = new Telegraf("7941758563:AAGIUiq25TsfeLiFs_hZFYlTzYVk_yxJYjI");
 adminID = 7419619814;
+
 const { startMessage } = require("./MessageHandler");
 const userState = {};
 
 // Command /start
 bot.start((ctx) => {
-  console.log(ctx.chat.id);
+  // console.log(ctx.chat.id);
 
   ctx.reply(startMessage(), {
     reply_markup: {
